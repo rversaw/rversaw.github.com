@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ryan Versaw's Blog</title>
+  <meta name="author" content="Ryan Versaw">
+
+  
+  <meta name="description" content="I haven’t seen this reported anywhere else, so I might as well throw a post up about it. Valve recently launched their Steam Wallet feature, which &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rversaw.github.com/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Ryan Versaw's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link rel="openid.server" href="http://www.myopenid.com/server" /><link rel="openid.delegate" href="http://rversaw.myopenid.com" />
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19066855-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Ryan Versaw's Blog</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rversaw.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/05/custom-steam-wallet-purchases/">Custom Steam Wallet Purchases</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-05T14:16:00-05:00" pubdate data-updated="true">Oct 5<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/10/05/custom-steam-wallet-purchases/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img src="/images/archive/SteamWallet_1.png" title="Steam Wallet" ></p>
+
+<p>I haven’t seen this reported anywhere else, so I might as well throw a post up about it.</p>
+
+
+<p>  <p>Valve recently launched their Steam Wallet feature, which was widely reported, but I just found a way to add custom amounts to your Steam Wallet (so you won&#8217;t be stuck with leftover pennies).</p>  <p>If you&#8217;re logged in and access <a href="http://store.steampowered.com/steamaccount/addfunds">the Steam Wallet page</a>, you can add specific increments. If you look into what the actual buttons are doing, they&#8217;re all just using a javascript call to add those amounts, like &#8220;javascript:submitAddFunds( 1000 );&#8221;. As this gives you the necessary precision to add whatever amount of money needed, this will help to make sure you don&#8217;t have anything extra sitting around. Valve is still validating the amount to make sure it’s over $5.00, but it appears to work fine for any larger amounts.</p>  <p>So basically, go to the <a href="http://store.steampowered.com/steamaccount/addfunds">Steam Wallet page</a> and throw &#8220;javascript:submitAddFunds( 1337 );&#8221; into your javascript console or address bar to try this for yourself.</p>  <p>Based on <a href="http://www.pcgamer.com/2010/09/30/interview-valve-on-why-theyre-selling-team-fortress-2-items-for-real-money/">this interview</a>, this looks like something they intended rather than an exploit, so I feel comfortable using it:</p>  <blockquote>   <p>As gamers who’ve used these kinds of systems before, we wanted to avoid some things we didn’t like. One was being forced to add more funds than we wanted (and seeing purchase prices that didn’t seem to match the funding options) and the other was being forced to do conversion into some virtual currency in our heads.</p>    <p>We’re not doing either of these in the Steam Wallet.</p></blockquote></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/07/28/check-your-entity-framework-contains-queries/">Check Your Entity Framework Contains() Queries (and Everything Else)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-28T11:13:00-05:00" pubdate data-updated="true">Jul 28<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/07/28/check-your-entity-framework-contains-queries/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I was analyzing the queries generated by a few of our page loads and came across a rather strange query:</p>
+
+
+<pre>SELECT CAST(NULL AS varchar(1))       AS [C1],
+       CAST(NULL AS uniqueidentifier) AS [C2],
+       CAST(NULL AS uniqueidentifier) AS [C3],
+       CAST(NULL AS int)              AS [C4],
+       CAST(NULL AS varchar(1))       AS [C5],
+       CAST(NULL AS varchar(1))       AS [C6],
+       CAST(NULL AS varchar(1))       AS [C7],
+       CAST(NULL AS varchar(1))       AS [C8],
+       CAST(NULL AS bit)              AS [C9],
+       CAST(NULL AS varchar(1))       AS [C10],
+       CAST(NULL AS varchar(1))       AS [C11],
+       CAST(NULL AS varchar(1))       AS [C12],
+       CAST(NULL AS varchar(1))       AS [C13],
+       CAST(NULL AS varchar(1))       AS [C14],
+       CAST(NULL AS varchar(1))       AS [C15],
+       CAST(NULL AS varchar(1))       AS [C16],
+       CAST(NULL AS varchar(1))       AS [C17]
+FROM   (SELECT 1 AS X) AS [SingleRowTable1]
+WHERE  1 = 0</pre>
+
+
+
+
+<p>(Note, this query has not been modified in any way, this is exactly as I found it)</p>
+
+
+
+
+<p>When I investigated this, I found the following code generated this awesome SQL:</p>
+
+
+<pre>GetContext().CreateObjectSet&lt;ProductFamily&gt;().Where(pf =&gt; ids.Contains(pf.Id))</pre>
+
+
+
+
+<p>If you’re unfamiliar with Entity Framework, this query should pull any ProductFamily records whose Id is within the ids collection. The problem I experienced came up when the ids collection was an empty set. I would have expected EF to short-circuit this query so it didn’t even hit the database, but this is another case where having a <a href="http://efprof.com/">good profiler</a> is often a necessity when using an ORM.</p>
+
+
+
+
+<p>I just came across another query that generated similar SQL:</p>
+
+
+<pre>
+        public virtual T GetById(object id)
+        {
+            return Items.SingleOrDefault(i =&gt; i.Id == id);
+        }
+</pre>
+
+
+
+
+<p>This is on our base repository along with numerous other methods for ease of reuse, which is why an object comes in – we can support Guids, ints, or whatever other PKs are in use. This new issue came up when we were using a nullable Guid elsewhere. We weren’t checking to make sure it had a value, and instead passed the nullable Guid in directly. Once again, EF detected that the value was null and that no records will match it, but decided to execute a query anyway.</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/09/24/sidewinder-x6-keyboard/">Sidewinder X6 Keyboard!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-24T12:57:00-05:00" pubdate data-updated="true">Sep 24<span>th</span>, 2009</time>
+        
+         | <a href="/blog/2009/09/24/sidewinder-x6-keyboard/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>There have been numerous contests going on lately leading up to the release of Windows 7, and I was lucky enough to win one of them! If you’re interested in taking a look at the current contests, be sure to follow <a href="http://twitter.com/WindowsGamer">@WindowsGamer</a> and <a href="http://twitter.com/MSWindows">@MSWindows</a>.</p>
+
+
+<p>  <p> </p>  <p>First of all, a picture of the keyboard (Logitech G15) I’m replacing:</p>  <p><a title="G15" href="http://www.flickr.com/photos/40571704@N05/3949165167/"><img border="0" alt="G15" src="http://static.flickr.com/3513/3949165167_d7abe76bda.jpg" /></a></p>  <p> </p>  <p>Here’s the new keyboard (Sidewinder X6):</p>  <p><a title="X6" href="http://www.flickr.com/photos/40571704@N05/3949188291/"><img border="0" alt="X6" src="http://static.flickr.com/2427/3949188291_4712e8a18d.jpg" /></a></p>  <p> </p>  <p>Some general thoughts so far:</p>  <ul>   <li>I miss my LCD – Not many games or programs support it, but it is useful when they do</li>    <li>The volume knob on the X6 doesn’t seem very responsive</li>    <li>The X6 keys took some getting used to, but I prefer the feel of them over the G15</li>    <li>The moveable number pad seems nice – When I’m gaming I don’t need it, so it makes sense to use it for macros instead</li>    <li>I’d prefer a Windows key on the right side as well, but I can deal with it. I’ve also found myself hitting F1 instead of Esc due to the altered placement</li>    <li>The X6 is lacking USB ports, though I thankfully have some convenient ones on my monitor </li> </ul>  <p>Overall, I’m a big fan of the X6 so far and I’ll definitely get used to the differences. The main thing I’ll miss is the LCD, though I suppose <a href="http://www.ventrilo.com/">Ventrilo</a> was one of the few apps I used it for. I’ll definitely keep using the X6 as my primary keyboard as I do prefer the feel of the keyboard over the G15 – Thanks again <a href="http://twitter.com/WindowsGamer">@WindowsGamer</a>!</p>  <p> </p>  <p><a href="http://www.flickr.com/photos/40571704@N05/sets/72157622319253497/">Keyboard Gallery</a></p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/06/01/customattributeformatexception-in-vs2010-beta-1/">CustomAttributeFormatException in VS2010 Beta 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-01T23:57:00-05:00" pubdate data-updated="true">Jun 1<span>st</span>, 2009</time>
+        
+         | <a href="/blog/2009/06/01/customattributeformatexception-in-vs2010-beta-1/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I’ve been doing some development recently with Visual Studio 2010 Beta 1 and because of this I ran across a bug in .NET 4.0 Beta 1:</p>
+
+<p><img src="/images/archive/CustomAttributeFormatException.png" title="CustomAttributeFormatException" ></p>
+
+<p>This cropped up when I decided to introduce logging into my application using the <a href="http://entlib.codeplex.com/">Microsoft Enterprise Library</a>. I soon found out that the current version of the Enterprise Library will not work with .NET 4.0 Beta 1 due to <a href="http://entlib.codeplex.com/Thread/View.aspx?ThreadId=56814">an existing bug</a>.</p>
+
+<p>The quick fix to this is to make sure your project is targeting .NET 3.5 SP1, which my project already was. After some more digging around I realized that though I was targeting 3.5, Visual Studio was hosting my WCF service using its .NET 4.0 version of WcfSvcHost.exe.</p>
+
+<p>The workaround that I’ve created involves pointing my project to the VS 2008 version of the WCF Service Host for debugging purposes:</p>
+
+<p><img src="/images/archive/Project_Properties.png" title="Project Properties" ></p>
+
+<p>The external program path I’m using is “C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\WcfSvcHost.exe”, though your path may vary. I set the working directory to my project’s debug directory.</p>
+
+<p><a href="https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=444020">Here</a> is the direct link to the Microsoft Connect bug report in case you want to validate it or vote it up.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/04/06/welcome/">Welcome!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-06T23:56:00-05:00" pubdate data-updated="true">Apr 6<span>th</span>, 2009</time>
+        
+         | <a href="/blog/2009/04/06/welcome/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Considering I have no worthwhile content at this time, you likely know me. In the future I hope to update this blog with something that is actually useful, but don’t count on constant updates.</p>
+
+<p>When I find the time I’ll try to upload a few projects I’ve worked on over the past few years.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2010/10/05/custom-steam-wallet-purchases/">Custom Steam Wallet Purchases</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/07/28/check-your-entity-framework-contains-queries/">Check your Entity Framework Contains() Queries (and Everything Else)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/09/24/sidewinder-x6-keyboard/">Sidewinder X6 Keyboard!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/06/01/customattributeformatexception-in-vs2010-beta-1/">CustomAttributeFormatException in VS2010 Beta 1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/04/06/welcome/">Welcome!</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/rversaw">@rversaw</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'rversaw',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rversaw", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/rversaw" class="twitter-follow-button" data-show-count="false">Follow @rversaw</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Ryan Versaw -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'versaw';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

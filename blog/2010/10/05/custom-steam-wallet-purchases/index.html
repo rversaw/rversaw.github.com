@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Custom Steam Wallet Purchases - Ryan Versaw's Blog</title>
+  <meta name="author" content="Ryan Versaw">
+
+  
+  <meta name="description" content="I haven’t seen this reported anywhere else, so I might as well throw a post up about it. Valve recently launched their Steam Wallet feature, which &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rversaw.github.com/blog/2010/10/05/custom-steam-wallet-purchases/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Ryan Versaw's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link rel="openid.server" href="http://www.myopenid.com/server" /><link rel="openid.delegate" href="http://rversaw.myopenid.com" />
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19066855-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Ryan Versaw's Blog</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rversaw.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Custom Steam Wallet Purchases</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-05T14:16:00-05:00" pubdate data-updated="true">Oct 5<span>th</span>, 2010</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img src="/images/archive/SteamWallet_1.png" title="Steam Wallet" ></p>
+
+<p>I haven’t seen this reported anywhere else, so I might as well throw a post up about it.</p>
+
+
+<p>  <p>Valve recently launched their Steam Wallet feature, which was widely reported, but I just found a way to add custom amounts to your Steam Wallet (so you won&#8217;t be stuck with leftover pennies).</p>  <p>If you&#8217;re logged in and access <a href="http://store.steampowered.com/steamaccount/addfunds">the Steam Wallet page</a>, you can add specific increments. If you look into what the actual buttons are doing, they&#8217;re all just using a javascript call to add those amounts, like &#8220;javascript:submitAddFunds( 1000 );&#8221;. As this gives you the necessary precision to add whatever amount of money needed, this will help to make sure you don&#8217;t have anything extra sitting around. Valve is still validating the amount to make sure it’s over $5.00, but it appears to work fine for any larger amounts.</p>  <p>So basically, go to the <a href="http://store.steampowered.com/steamaccount/addfunds">Steam Wallet page</a> and throw &#8220;javascript:submitAddFunds( 1337 );&#8221; into your javascript console or address bar to try this for yourself.</p>  <p>Based on <a href="http://www.pcgamer.com/2010/09/30/interview-valve-on-why-theyre-selling-team-fortress-2-items-for-real-money/">this interview</a>, this looks like something they intended rather than an exploit, so I feel comfortable using it:</p>  <blockquote>   <p>As gamers who’ve used these kinds of systems before, we wanted to avoid some things we didn’t like. One was being forced to add more funds than we wanted (and seeing purchase prices that didn’t seem to match the funding options) and the other was being forced to do conversion into some virtual currency in our heads.</p>    <p>We’re not doing either of these in the Steam Wallet.</p></blockquote></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Ryan Versaw</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-05T14:16:00-05:00" pubdate data-updated="true">Oct 5<span>th</span>, 2010</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rversaw.github.com/blog/2010/10/05/custom-steam-wallet-purchases/" data-via="rversaw" data-counturl="http://rversaw.github.com/blog/2010/10/05/custom-steam-wallet-purchases/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/07/28/check-your-entity-framework-contains-queries/" title="Previous Post: Check your Entity Framework Contains() Queries (and Everything Else)">&laquo; Check your Entity Framework Contains() Queries (and Everything Else)</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2010/10/05/custom-steam-wallet-purchases/">Custom Steam Wallet Purchases</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/07/28/check-your-entity-framework-contains-queries/">Check your Entity Framework Contains() Queries (and Everything Else)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/09/24/sidewinder-x6-keyboard/">Sidewinder X6 Keyboard!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/06/01/customattributeformatexception-in-vs2010-beta-1/">CustomAttributeFormatException in VS2010 Beta 1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2009/04/06/welcome/">Welcome!</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/rversaw">@rversaw</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'rversaw',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rversaw", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/rversaw" class="twitter-follow-button" data-show-count="false">Follow @rversaw</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Ryan Versaw -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'versaw';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rversaw.github.com/blog/2010/10/05/custom-steam-wallet-purchases/';
+        var disqus_url = 'http://rversaw.github.com/blog/2010/10/05/custom-steam-wallet-purchases/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
