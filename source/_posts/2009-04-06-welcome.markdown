@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Welcome!"
+date: 2009-04-06 23:56
+comments: true
+categories: 
+alias: [/archive/2009/04/06/welcome.aspx]
+---
+Considering I have no worthwhile content at this time, you likely know me. In the future I hope to update this blog with something that is actually useful, but don’t count on constant updates.
+
+When I find the time I’ll try to upload a few projects I’ve worked on over the past few years.

@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Custom Steam Wallet Purchases"
+date: 2010-10-05 14:16
+comments: true
+categories: 
+alias: [/archive/2010/10/05/custom-steam-wallet-purchases.aspx]
+---
+{% img /images/archive/SteamWallet_1.png Steam Wallet %}
+<p>I haven’t seen this reported anywhere else, so I might as well throw a post up about it.</p>  <p>Valve recently launched their Steam Wallet feature, which was widely reported, but I just found a way to add custom amounts to your Steam Wallet (so you won't be stuck with leftover pennies).</p>  <p>If you're logged in and access <a href="http://store.steampowered.com/steamaccount/addfunds">the Steam Wallet page</a>, you can add specific increments. If you look into what the actual buttons are doing, they're all just using a javascript call to add those amounts, like "javascript:submitAddFunds( 1000 );". As this gives you the necessary precision to add whatever amount of money needed, this will help to make sure you don't have anything extra sitting around. Valve is still validating the amount to make sure it’s over $5.00, but it appears to work fine for any larger amounts.</p>  <p>So basically, go to the <a href="http://store.steampowered.com/steamaccount/addfunds">Steam Wallet page</a> and throw "javascript:submitAddFunds( 1337 );" into your javascript console or address bar to try this for yourself.</p>  <p>Based on <a href="http://www.pcgamer.com/2010/09/30/interview-valve-on-why-theyre-selling-team-fortress-2-items-for-real-money/">this interview</a>, this looks like something they intended rather than an exploit, so I feel comfortable using it:</p>  <blockquote>   <p>As gamers who’ve used these kinds of systems before, we wanted to avoid some things we didn’t like. One was being forced to add more funds than we wanted (and seeing purchase prices that didn’t seem to match the funding options) and the other was being forced to do conversion into some virtual currency in our heads.</p>    <p>We’re not doing either of these in the Steam Wallet.</p></blockquote>
