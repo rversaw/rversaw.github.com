@@ -4,7 +4,6 @@ title: "CustomAttributeFormatException in VS2010 Beta 1"
 date: 2009-06-01 23:57
 comments: true
 categories: 
-alias: [/archive/2009/06/01/customattributeformatexception-in-vs2010-beta-1.aspx]
 ---
 I’ve been doing some development recently with Visual Studio 2010 Beta 1 and because of this I ran across a bug in .NET 4.0 Beta 1:
 
