@@ -97,3 +97,7 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+# OpenId Delegate
+openid_delegate: http://rversaw.myopenid.com
+openid_server: http://www.myopenid.com/server
